@@ -1,8 +1,7 @@
 FROM node
 WORKDIR /app
 COPY . . 
-RUN npm install
+RUN npm install && npm start 
 RUN chmod +x ./scripts/runApp.sh
-RUN npm start
 EXPOSE 9981
 CMD ["node","app.js"]
